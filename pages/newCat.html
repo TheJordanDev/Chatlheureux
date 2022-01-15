@@ -1,0 +1,29 @@
+<!--<input id="name" type="text" placeholder="Prénom" autocomplete="off"><br>
+<input id="mail" type="text" placeholder="E-Mail" autocomplete="off"><br>
+<input id="password" type="password" placeholder="Mot De Passe" autocomplete="off"><br>
+<p style="font-size: 2vmax; vertical-align: middle;">Afficher le mot de passe ? <input id="passwordToggle" style="width: 2vmax; height: 2vmax;" type="checkbox" onclick="togglePasssword('password');"></p><br>
+<p class="error" id="error" style="font-size: 1.5vmax;" hidden></p><br>
+<input type="submit" value="COMFIRMER" onclick="register();"><br><br>
+<a onclick="switchLogin();" style="font-size: 1.5vmax;">J'ai déjà un compte.</a>
+<script>setupAccountPage()</script>-->
+<div class="form">
+    <button class="actionBtn" style="position:fixed; left: 0; top: 0;" id="back" onclick="goBackToProfile();"><i style="color: #fdf7a6; border: 2px !important; margin: 2px;"class="fas fa-arrow-alt-circle-left fa-5x"></i></button>
+    <label for="cat_name">PRENOM</label><br>
+    <input type="text" id="cat_name" placeholder="Prénom du chat"><br><br>
+    <label for="cat_gender">SEXE</label><br>
+    <select class="select" id="cat_gender">
+        <option value="-1" selected>Choisir un sexe</option>
+        <option value="0">Femelle</option>
+        <option value="1">Male</option>
+    </select><br><br>
+    <label for="cat_birth">NAISSANCE</label><br>
+    <input class="large" type="date" id="cat_birth"><br><br>
+    <label for="cat_race">RACE</label><br>
+    <input class="large" id="cat_race" list="cat_races" placeholder="Race"></input><br><br>
+    <datalist id="cat_races">
+
+    </datalist>
+    <input id="create" type="button" value="CREER" onclick="newCat();"><br>
+    <p class="error" id="error" style="font-size: 1.5vmax;" hidden></p><br>
+</div>
+<script>setupNewCatPage();</script>
